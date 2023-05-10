@@ -36,7 +36,7 @@ app.use('/api/v1/product', productRoutes);
 //   res.send("<h1>Welcome to ecommerce app</h1>")
 // })
 
-app.use('*', function(req, res) {
+app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
 })
 
